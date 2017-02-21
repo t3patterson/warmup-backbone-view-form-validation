@@ -20,6 +20,10 @@ const FormView = Backbone.View.extend({
 		alert("/???/")
 		evt.preventDefault()
 		console.log('form submitted!')
+		/*
+		 * Walk thru first example
+		 *
+		*/
 	},
 
 	
@@ -32,7 +36,7 @@ const FormView = Backbone.View.extend({
 	   // (1) User name cannot be blank and must contain no spaces
 		// ---------------------------------------
 		htmlStr += `
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_username">
 				<label>Username</label>
 				<input type="text" name="username" placeholder="Password"/>
 				<p class="flash-msg MG-bg_fail ">Password cannot be blank</p>
@@ -43,12 +47,12 @@ const FormView = Backbone.View.extend({
 		// (2) Password should match other password
 		// ---------------------------------------
 		htmlStr += `
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_password">
 				<label>Password</label>
 				<input type="password" name="password" placeholder="Password"/>
 				<p class="flash-msg MG-bg_success">YESSS</p>	
 			</div>
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_password-confirm">
 				<label>Confirm Password</label>
 				<input type="password" name="confirmPassword" placeholder="Confirm Password"/>
 			</div>
@@ -59,7 +63,7 @@ const FormView = Backbone.View.extend({
 		// (3) Should be a number (no alphabetic characters)
 		// ---------------------------------------
 		htmlStr += `
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_salary">
 				<label>Targeted Salary</label>
 				<input type="text" name="salary" placeholder="Password"/>
 				<p class="flash-msg MG-bg_fail">Input field must contain a number</p>	
@@ -70,7 +74,7 @@ const FormView = Backbone.View.extend({
 		// (4) One of the options should be selected
 		// ---------------------------------------
 		htmlStr += `
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_gender">
 				<label>Your Gender</label>
 				<label class="gendr" ><input type="radio" name="gender" value="male" class="MG-radio"/> Male</label>
 				<label class="gendr" ><input type="radio" name="gender" value="female" class="MG-radio"/> Female</label>
@@ -83,7 +87,7 @@ const FormView = Backbone.View.extend({
 		// (5) Clear all values on the form inputs if user clicks the .btn_reset button 
 		// ---------------------------------------
 		htmlStr += `
-			<div class="MG-md-6-of-12 MG-form-group__field">
+			<div class="MG-md-6-of-12 MG-form-group__field field_terms">
 				<h6><input type="checkbox" name="termsAccepted" class="MG-checkbox"/> I confirm that I agree to the terms outlined above </h6>
 				<p class="flash-msg MG-bg_success">YESSS</p>	
 				<button class="MG-btn_primary" type="submit">Submit</button> 
