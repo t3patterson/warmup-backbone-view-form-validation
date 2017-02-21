@@ -1,0 +1,15 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: limegreen;
+}
+
+$txt-color: maroon;
+
+h2{
+	color: $txt-color;
+	border-bottom: 4px solid $txt-color;
+}
+
