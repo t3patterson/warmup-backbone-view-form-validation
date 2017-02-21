@@ -34,7 +34,7 @@ const FormView = Backbone.View.extend({
 		htmlStr += `
 			<div class="MG-md-6-of-12 MG-form-group__field">
 				<label>Username</label>
-				<input type="password" placeholder="Password"/>
+				<input type="text" name="username" placeholder="Password"/>
 				<p class="flash-msg MG-bg_fail ">Password cannot be blank</p>
 			</div>
 			<div class="MG-sm-12-of-12"><hr/></div>
@@ -45,12 +45,12 @@ const FormView = Backbone.View.extend({
 		htmlStr += `
 			<div class="MG-md-6-of-12 MG-form-group__field">
 				<label>Password</label>
-				<input type="password" placeholder="Password"/>
+				<input type="password" name="password" placeholder="Password"/>
 				<p class="flash-msg MG-bg_success">YESSS</p>	
 			</div>
 			<div class="MG-md-6-of-12 MG-form-group__field">
 				<label>Confirm Password</label>
-				<input type="password" placeholder="Confirm Password"/>
+				<input type="password" name="confirmPassword" placeholder="Confirm Password"/>
 			</div>
 			<div class="MG-sm-12-of-12"><hr/></div>
 
@@ -61,7 +61,7 @@ const FormView = Backbone.View.extend({
 		htmlStr += `
 			<div class="MG-md-6-of-12 MG-form-group__field">
 				<label>Targeted Salary</label>
-				<input type="text" placeholder="Password"/>
+				<input type="text" name="salary" placeholder="Password"/>
 				<p class="flash-msg MG-bg_fail">Input field must contain a number</p>	
 			</div>
 		`
