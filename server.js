@@ -20,7 +20,8 @@ const renderFile = require('ejs').renderFile
 //run the express app
 const app = express()
 
-if( process.env === 'development' ){
+if( process.env.NODE_ENV === 'development' ){
+	console.log('using teh webpack!')
 	app.use(webpackMiddleware(webpackCompiler, {
 	   noInfo: true,
 	   publicPath: webpackConfig.output.publicPath

@@ -1,15 +1,9 @@
+@import '../../node_modules/margo-css/margo.min.css';
+
 *{
 	box-sizing: border-box;
 }
 
-body{
-	background: limegreen;
-}
+.MG-form-group__field label.gendr{font-weight: 400; }
 
-$txt-color: maroon;
-
-h2{
-	color: $txt-color;
-	border-bottom: 4px solid $txt-color;
-}
-
+.flash-msg{ padding: 5px; }
