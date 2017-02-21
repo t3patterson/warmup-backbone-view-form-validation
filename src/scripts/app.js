@@ -1,6 +1,15 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 
+//--------------------------------------------------------------------------
+//TASK :  Create form validation based on the criteria asked below.
+//        
+//        For inputs that don't meet the criteria, you will need 
+//        to apply a class of 'MG-bg_fail'
+//
+//        For inputs that are valid, you will apply a class of 'MG-bg_success'
+//--------------------------------------------------------------------------
+
 const FormView = Backbone.View.extend({
 	el: '#app-container',
 	events: {
@@ -8,6 +17,7 @@ const FormView = Backbone.View.extend({
 	},
 	
 	handleFormSubmit: function(evt){
+		alert("/???/")
 		evt.preventDefault()
 		console.log('form submitted!')
 	},
@@ -46,7 +56,18 @@ const FormView = Backbone.View.extend({
 
 		 `
 	   
-		// (3) Password should match other password
+		// (3) Should be a number (no alphabetic characters)
+		// ---------------------------------------
+		htmlStr += `
+			<div class="MG-md-6-of-12 MG-form-group__field">
+				<label>Targeted Salary</label>
+				<input type="text" placeholder="Password"/>
+				<p class="flash-msg MG-bg_fail">Input field must contain a number</p>	
+			</div>
+		`
+
+		
+		// (4) One of the options should be selected
 		// ---------------------------------------
 		htmlStr += `
 			<div class="MG-md-6-of-12 MG-form-group__field">
@@ -59,13 +80,14 @@ const FormView = Backbone.View.extend({
 			<div class="MG-sm-12-of-12"><hr/></div>
 		`
 
-		// (4) Password should match other password
+		// (5) Clear all values on the form inputs if user clicks the .btn_reset button 
 		// ---------------------------------------
 		htmlStr += `
 			<div class="MG-md-6-of-12 MG-form-group__field">
 				<h6><input type="checkbox" name="termsAccepted" class="MG-checkbox"/> I confirm that I agree to the terms outlined above </h6>
 				<p class="flash-msg MG-bg_success">YESSS</p>	
-				<button class="MG-btn_primary" type="submit">Submit</button> <button class="MG-btn_sm">Reset</button>
+				<button class="MG-btn_primary" type="submit">Submit</button> 
+				<button class="MG-btn_sm btn_reset">Reset</button>
 			</div>
 			
 		</form>`
